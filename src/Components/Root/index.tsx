@@ -1,9 +1,10 @@
 import React from 'react';
 
-import { Typography, Box } from '@material-ui/core/';
+import { Box } from '@material-ui/core/';
 
 import { SettingsProvider } from './settingsReducer';
 import Header from 'Components/Header';
+import BottomNavigation from 'Components/BottomNavigation';
 
 type RootProps = {
   children?: React.ReactElement;
@@ -16,9 +17,9 @@ const Root: React.FC<RootProps> = ({ children }: RootProps) => {
         <Box height="1" width="1">
           <Header />
           <Box component="main">{children}</Box>
-          <div>
-            <Typography color="textPrimary">BottomNavigation</Typography>
-          </div>
+          <Box>
+            <BottomNavigation />
+          </Box>
         </Box>
       </SettingsProvider>
     </>

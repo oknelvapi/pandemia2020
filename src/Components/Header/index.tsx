@@ -30,9 +30,9 @@ const Header: React.FC<HeaderProps> = () => {
   return (
     <div className={classes.grow}>
       <CssBaseline />
-      <AppBar>
+      <AppBar color="secondary">
         <Toolbar>
-          <Typography variant="h1" color="secondary" className={classes.title}>
+          <Typography variant="h1" color="primary" className={classes.title}>
             Pandemia 2020
           </Typography>
           <div className={classes.grow} />
