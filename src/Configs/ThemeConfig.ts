@@ -4,7 +4,7 @@ export const p2020Theme = createMuiTheme({
   palette: {
     // type: 'dark',
     primary: {
-      main: '#26547C',
+      main: '#132a3e',
       contrastText: '#F0F2EF',
     },
     secondary: {
