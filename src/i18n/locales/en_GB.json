@@ -1,0 +1,27 @@
+{
+  "translation": {
+    "countries1": {
+      "ukraine": "Ukraine",
+      "belarus": "Belarus",
+      "poland": "Poland",
+      "italy": "Italy",
+      "moldova": "Moldova",
+      "allWorld": "All world"
+    },
+    "countries": ["Ukraine", "Belarus", "Poland", "Moldova", "Italy", "All world"],
+    "header": {
+      "title": "Pandemic 2020",
+      "tooltips": {
+        "countries": "Select country",
+        "languages": "Change language"
+      }
+    },
+
+    "bottomNavigation": {
+      "links": {
+        "worldMap": "World map",
+        "timeLine": "Timeline"
+      }
+    }
+  }
+}
