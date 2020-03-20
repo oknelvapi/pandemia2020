@@ -8,8 +8,7 @@ import { GitHub, Language as Country, Translate } from '@material-ui/icons';
 import { SettingsContext } from 'Components/Root/settingsReducer';
 import HeaderPopover from '../HeaderPopover';
 import HeaderButton from '../HeaderButton';
-
-const languages = ['EN', 'UA', 'BE'];
+import { LANGUAGES } from 'i18n/languages';
 
 type HeaderMenuProps = {};
 
@@ -46,7 +45,7 @@ const HeaderMenu: React.FC<HeaderMenuProps> = () => {
       type: 'ACTION_SWITCH_LANGUAGE',
       payload: { indexLang: index },
     });
-    changeLanguage(languages[index].toLowerCase());
+    changeLanguage(LANGUAGES[index].toLowerCase());
   };
 
   console.log(settingsState.indexLang);
@@ -61,7 +60,7 @@ const HeaderMenu: React.FC<HeaderMenuProps> = () => {
         >
           <Country />
         </HeaderButton>
-        <HeaderButton handleClick={handleClickLang} aria="lang" title={languages[settingsState.indexLang]}>
+        <HeaderButton handleClick={handleClickLang} aria="lang" title={LANGUAGES[settingsState.indexLang]}>
           <Translate />
         </HeaderButton>
         <IconButton
@@ -87,7 +86,7 @@ const HeaderMenu: React.FC<HeaderMenuProps> = () => {
         handleMenuItemClick={toggleLang}
         selectedIndex={settingsState.indexLang}
         anchorEl={settingsState.anchorLang}
-        items={languages}
+        items={LANGUAGES}
       />
     </>
   );
