@@ -5,6 +5,8 @@ import App from 'Containers/App';
 
 import * as serviceWorker from './serviceWorker';
 
+import './i18n';
+
 import 'typeface-roboto';
 import './index.scss';
 

@@ -1,0 +1,19 @@
+{
+  "translation": {
+    "countries": ["Україна", "Білорусь", "Польща", "Італія", "Молдова", "Світ"],
+    "header": {
+      "title": "Пандемія 2020",
+      "tooltips": {
+        "countries": "Обрати країну",
+        "languages": "Змінити мову"
+      }
+    },
+
+    "bottomNavigation": {
+      "links": {
+        "worldMap": "Карта світу",
+        "timeLine": "Хронологія"
+      }
+    }
+  }
+}
