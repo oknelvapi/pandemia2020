@@ -1,18 +1,20 @@
 import React, { useContext } from 'react';
 
+import { useTranslation } from 'react-i18next';
+
 import { Box, IconButton } from '@material-ui/core';
 import { GitHub, Language as Country, Translate } from '@material-ui/icons';
 
 import { SettingsContext } from 'Components/Root/settingsReducer';
 import HeaderPopover from '../HeaderPopover';
 import HeaderButton from '../HeaderButton';
-
-const countries = ['Ukraine', 'Poland', 'Belarus', 'Moldova', 'All world'];
-const languages = ['EN', 'UA'];
+import { LANGUAGES } from 'i18n/languages';
 
 type HeaderMenuProps = {};
 
 const HeaderMenu: React.FC<HeaderMenuProps> = () => {
+  const { t, i18n } = useTranslation();
+  const countries: string[] = t('countries', { returnObjects: true });
   const { settingsState, settingsDispatch } = useContext(SettingsContext);
 
   const handleClickCountry = (event: React.MouseEvent<HTMLElement>): void => {
@@ -34,13 +36,19 @@ const HeaderMenu: React.FC<HeaderMenuProps> = () => {
       payload: { indexCountry: index },
     });
   };
+  const changeLanguage = (lng: string): void => {
+    i18n.changeLanguage(lng);
+  };
+
   const toggleLang = (event: React.MouseEvent<HTMLElement>, index: number): void => {
     settingsDispatch({
       type: 'ACTION_SWITCH_LANGUAGE',
       payload: { indexLang: index },
     });
+    changeLanguage(LANGUAGES[index].toLowerCase());
   };
 
+  console.log(settingsState.indexLang);
   return (
     <>
       <Box display="flex">
@@ -52,7 +60,7 @@ const HeaderMenu: React.FC<HeaderMenuProps> = () => {
         >
           <Country />
         </HeaderButton>
-        <HeaderButton handleClick={handleClickLang} aria="lang" title={languages[settingsState.indexLang]}>
+        <HeaderButton handleClick={handleClickLang} aria="lang" title={LANGUAGES[settingsState.indexLang]}>
           <Translate />
         </HeaderButton>
         <IconButton
@@ -78,7 +86,7 @@ const HeaderMenu: React.FC<HeaderMenuProps> = () => {
         handleMenuItemClick={toggleLang}
         selectedIndex={settingsState.indexLang}
         anchorEl={settingsState.anchorLang}
-        items={languages}
+        items={LANGUAGES}
       />
     </>
   );
