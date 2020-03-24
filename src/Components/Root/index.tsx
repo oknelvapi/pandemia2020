@@ -14,9 +14,11 @@ const Root: React.FC<RootProps> = ({ children }: RootProps) => {
   return (
     <>
       <SettingsProvider>
-        <Box height="1" width="1">
+        <Box height="1" width="1" display="flex" flexDirection="column">
           <Header />
-          <Box component="main">{children}</Box>
+          <Box component="main" flexGrow={1} mb={7}>
+            {children}
+          </Box>
           <Box>
             <BottomNavigation />
           </Box>
