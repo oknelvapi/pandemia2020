@@ -1,0 +1,158 @@
+[
+  {
+    "id": "UA-05",
+    "name": "Vinnytsia",
+    "days": [
+      {
+        "id": 200314,
+        "day": "20-03-14",
+        "confirmed cases": 20,
+        "deaths": 0,
+        "recovered": 0
+      },
+      {
+        "id": 200315,
+        "day": "20-03-15",
+        "confirmed cases": 32,
+        "deaths": 1,
+        "recovered": 2
+      }
+    ]
+  },
+  {
+    "id": "UA-07",
+    "name": "Volyn",
+    "days": [
+      {
+        "id": 200314,
+        "day": "20-03-14",
+        "confirmed cases": 3,
+        "deaths": 0,
+        "recovered": 0
+      },
+      {
+        "id": 200315,
+        "day": "20-03-15",
+        "confirmed cases": 19,
+        "deaths": 0,
+        "recovered": 0
+      }
+    ]
+  },
+  {
+    "id": "UA-09",
+    "name": "Luhansk"
+  },
+  {
+    "id": "UA-12",
+    "name": "Dnipropetrovsk"
+  },
+  {
+    "id": "UA-14",
+    "name": "Donetsk"
+  },
+  {
+    "id": "UA-18",
+    "name": "Zhytomyr"
+  },
+  {
+    "id": "UA-21",
+    "name": "Zakarpattia"
+  },
+  {
+    "id": "UA-23",
+    "name": "Zaporizhzhya"
+  },
+  {
+    "id": "UA-26",
+    "name": "Ivano-Frankivsk"
+  },
+  {
+    "id": "UA-30",
+    "name": "Kyiv City",
+    "days": [
+      {
+        "id": 200315,
+        "day": "20-03-15",
+        "confirmed cases": 40,
+        "deaths": 1,
+        "recovered": 0
+      },
+      {
+        "id": 200316,
+        "day": "20-03-16",
+        "confirmed cases": 104,
+        "deaths": 9,
+        "recovered": 22
+      }
+    ]
+  },
+  {
+    "id": "UA-32",
+    "name": "Kyiv"
+  },
+  {
+    "id": "UA-35",
+    "name": "Kropyvnytskyi"
+  },
+  {
+    "id": "UA-40",
+    "name": "Sevastopol"
+  },
+  {
+    "id": "UA-43",
+    "name": "Crimea"
+  },
+  {
+    "id": "UA-46",
+    "name": "Lviv"
+  },
+  {
+    "id": "UA-48",
+    "name": "Mykolaiv"
+  },
+  {
+    "id": "UA-51",
+    "name": "Odessa"
+  },
+  {
+    "id": "UA-53",
+    "name": "Poltava"
+  },
+  {
+    "id": "UA-56",
+    "name": "Rivne"
+  },
+  {
+    "id": "UA-59",
+    "name": "Sumy"
+  },
+  {
+    "id": "UA-61",
+    "name": "Ternopil"
+  },
+  {
+    "id": "UA-63",
+    "name": "Kharkiv"
+  },
+  {
+    "id": "UA-65",
+    "name": "Kherson"
+  },
+  {
+    "id": "UA-68",
+    "name": "Khmelnytskyi"
+  },
+  {
+    "id": "UA-71",
+    "name": "Cherkasy"
+  },
+  {
+    "id": "UA-74",
+    "name": "Chernihiv"
+  },
+  {
+    "id": "UA-77",
+    "name": "Chernivtsi"
+  }
+]
