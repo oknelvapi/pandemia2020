@@ -55,14 +55,15 @@ const WorldMap: React.FC<WorldMapProps> = (props: WorldMapProps) => {
     const hs = polygonTemplate.states.create('hover');
     hs.properties.fill = am4core.color('rgba(68, 68, 68, 0.5)');
     // Add some data
-    polygonSeries.data = [...ukraineRegions];
+    polygonSeries.data = ukraineRegions();
 
     // Bind "fill" property to "fill" key in data
     polygonTemplate.propertyFields.fill = 'fill';
 
-    return () => map.dispose();
-  }, [settingsState.indexCountry]);
-
+    return (): void => {
+      map.dispose();
+    };
+  }, [settingsState.indexCountry, settingsState.indexLang]);
   return <Box id="chartdiv" height={1} width={1}></Box>;
 };
 
