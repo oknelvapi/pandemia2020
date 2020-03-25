@@ -31,7 +31,7 @@ const Header: React.FC<HeaderProps> = () => {
   const { t } = useTranslation();
 
   return (
-    <div className={classes.grow}>
+    <>
       <CssBaseline />
       <AppBar color="secondary">
         <Toolbar>
@@ -43,7 +43,7 @@ const Header: React.FC<HeaderProps> = () => {
         </Toolbar>
       </AppBar>
       <Toolbar />
-    </div>
+    </>
   );
 };
 export default Header;

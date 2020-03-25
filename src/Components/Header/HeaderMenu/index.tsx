@@ -48,7 +48,6 @@ const HeaderMenu: React.FC<HeaderMenuProps> = () => {
     changeLanguage(LANGUAGES[index].toLowerCase());
   };
 
-  console.log(settingsState.indexLang);
   return (
     <>
       <Box display="flex">
