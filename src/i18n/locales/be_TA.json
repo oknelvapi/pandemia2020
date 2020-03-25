@@ -5,12 +5,13 @@
       "title": "Пандэмія 2020",
       "tooltips": {
         "countries": "Абярыце краіну",
-        "languages": "Змена мовы"
+        "languages": "Змена мовы",
+        "github": "GitHub сховішча"
       }
     },
     "bottomNavigation": {
       "links": {
-        "worldMap": "Карта свету",
+        "worldMap": "Карта",
         "timeLine": "Хроніка"
       }
     }

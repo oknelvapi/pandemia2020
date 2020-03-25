@@ -4,12 +4,13 @@
       "title": "Pandemic 2020",
       "tooltips": {
         "countries": "Select country",
-        "languages": "Change language"
+        "languages": "Change language",
+        "github": "GitHub repository"
       }
     },
     "bottomNavigation": {
       "links": {
-        "worldMap": "World map",
+        "worldMap": "Map",
         "timeLine": "Timeline"
       }
     },
