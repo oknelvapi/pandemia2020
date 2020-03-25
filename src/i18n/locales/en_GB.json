@@ -1,0 +1,128 @@
+{
+  "translation": {
+    "header": {
+      "title": "Pandemic 2020",
+      "tooltips": {
+        "countries": "Select country",
+        "languages": "Change language"
+      }
+    },
+    "bottomNavigation": {
+      "links": {
+        "worldMap": "World map",
+        "timeLine": "Timeline"
+      }
+    },
+    "countries": ["Ukraine", "All world"],
+    "ukraine": {
+      "vinnytsia": {
+        "capital": "Vinnytsia",
+        "region": "Vinnytsia"
+      },
+      "volyn": {
+        "capital": "Lutsk",
+        "region": "Volyn"
+      },
+      "luhansk": {
+        "capital": "Luhansk",
+        "region": "Luhansk"
+      },
+      "dnipro": {
+        "capital": "Dnipro",
+        "region": "Dnipropetrovsk"
+      },
+      "donetsk": {
+        "capital": "Donetsk",
+        "region": "Donetsk"
+      },
+      "zhytomyr": {
+        "capital": "Zhytomyr",
+        "region": "Zhytomyr"
+      },
+      "zakarpattia": {
+        "capital": "Uzhgorod",
+        "region": "Zakarpattia"
+      },
+      "zaporizhzhya": {
+        "capital": "Zaporizhzhya",
+        "region": "Zaporizhzhya"
+      },
+      "ivanoFrankivsk": {
+        "capital": "Ivano-Frankivsk",
+        "region": "Ivano-Frankivsk"
+      },
+      "kyivCity": {
+        "capital": "Kyiv City",
+        "region": "Kyiv City"
+      },
+      "kyiv": {
+        "capital": "Kyiv",
+        "region": "Kyiv"
+      },
+      "kropyvnytskyi": {
+        "capital": "kropyvnytskyi",
+        "region": "kropyvnytskyi"
+      },
+      "sevastopol": {
+        "capita;": "Sevastopol",
+        "region": "Sevastopol"
+      },
+      "crimea": {
+        "capital": "Simferopol",
+        "region": "Crimea"
+      },
+      "lviv": {
+        "capital": "Lviv",
+        "region": "Lviv"
+      },
+      "mykolaiv": {
+        "capital": "Mykolaiv",
+        "region": "Mykolaiv"
+      },
+      "odesa": {
+        "capital": "Odesa",
+        "region": "Odesa"
+      },
+      "poltava": {
+        "capital": "Poltava",
+        "region": "Poltava"
+      },
+      "rivne": {
+        "capital": "Rivne",
+        "region": "Rivne"
+      },
+      "sumy": {
+        "capital": "Sumy",
+        "region": "Summy"
+      },
+      "ternopil": {
+        "capital": "Ternopil",
+        "region": "Ternopil"
+      },
+      "kharkiv": {
+        "capital": "Kharkiv",
+        "region": "Kharkiv"
+      },
+      "kherson": {
+        "capital": "Kherson",
+        "region": "Kherson"
+      },
+      "khmelnytskyi": {
+        "capital": "Khmelnytskyi",
+        "region": "Khmelnytskyi"
+      },
+      "cherkasy": {
+        "capital": "Cherkasy",
+        "region": "Cherkasy"
+      },
+      "chernihiv": {
+        "capital": "Chernihiv",
+        "region": "Chernihiv"
+      },
+      "chernivtsi": {
+        "capital": "Chernivtsi",
+        "region": "Chernivtsi"
+      }
+    }
+  }
+}

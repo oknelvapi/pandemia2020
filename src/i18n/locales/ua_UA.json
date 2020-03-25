@@ -1,0 +1,129 @@
+{
+  "translation": {
+    "header": {
+      "title": "Пандемія 2020",
+      "tooltips": {
+        "countries": "Обрати країну",
+        "languages": "Змінити мову"
+      }
+    },
+
+    "bottomNavigation": {
+      "links": {
+        "worldMap": "Карта світу",
+        "timeLine": "Хронологія"
+      }
+    },
+    "countries": ["Україна", "Світ"],
+    "ukraine": {
+      "vinnytsia": {
+        "capital": "Вінниця",
+        "region": "Вінничина"
+      },
+      "volyn": {
+        "capital": "Луцьк",
+        "region": "Волинь"
+      },
+      "luhansk": {
+        "capital": "Луганськ",
+        "region": "Луганщина"
+      },
+      "dnipro": {
+        "capital": "Дніпро",
+        "region": "Дніпропетровщина"
+      },
+      "donetsk": {
+        "capital": "Донецьк",
+        "region": "Донеччина"
+      },
+      "zhytomyr": {
+        "capital": "Житомир",
+        "region": "Житомиршина"
+      },
+      "zakarpattia": {
+        "capital": "Ужгород",
+        "region": "Закарпаття"
+      },
+      "zaporizhzhya": {
+        "capital": "Запоріжжя",
+        "region": "Запоріжжя"
+      },
+      "ivanoFrankivsk": {
+        "capital": "Івано-Франківськ",
+        "region": "Івано-Франківщина"
+      },
+      "kyivCity": {
+        "capital": "місто Київ",
+        "region": "місто Київ"
+      },
+      "kyiv": {
+        "capital": "Київ",
+        "region": "Київщина"
+      },
+      "kropyvnytskyi": {
+        "capital": "Кропивницький",
+        "region": "Кропивниччина"
+      },
+      "sevastopol": {
+        "capita;": "Севастополь",
+        "region": "Севастополь"
+      },
+      "crimea": {
+        "capital": "Сімферополь",
+        "region": "АР Крим"
+      },
+      "lviv": {
+        "capital": "Львів",
+        "region": "Львівщина"
+      },
+      "mykolaiv": {
+        "capital": "Миколаїв",
+        "region": "Миколаївщина"
+      },
+      "odesa": {
+        "capital": "Одеса",
+        "region": "Одещина"
+      },
+      "poltava": {
+        "capital": "Полтава",
+        "region": "Полтавщина"
+      },
+      "rivne": {
+        "capital": "Рівне",
+        "region": "рівненщина"
+      },
+      "sumy": {
+        "capital": "Суми",
+        "region": "Сумщина"
+      },
+      "ternopil": {
+        "capital": "Тернопіль",
+        "region": "Тернопільщина"
+      },
+      "kharkiv": {
+        "capital": "Харків",
+        "region": "Харківщина"
+      },
+      "kherson": {
+        "capital": "Херсон",
+        "region": "Херсонщина"
+      },
+      "khmelnytskyi": {
+        "capital": "Хмельницький",
+        "region": "Хмельниччина"
+      },
+      "cherkasy": {
+        "capital": "Черкаси",
+        "region": "Черкащина"
+      },
+      "chernihiv": {
+        "capital": "Чернігів",
+        "region": "Чернігівщина"
+      },
+      "chernivtsi": {
+        "capital": "Чернівці",
+        "region": "Буковина"
+      }
+    }
+  }
+}

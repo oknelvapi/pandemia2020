@@ -1,0 +1,18 @@
+{
+  "translation": {
+    "countries": ["Украіна", "Мір"],
+    "header": {
+      "title": "Пандэмія 2020",
+      "tooltips": {
+        "countries": "Абярыце краіну",
+        "languages": "Змена мовы"
+      }
+    },
+    "bottomNavigation": {
+      "links": {
+        "worldMap": "Карта свету",
+        "timeLine": "Хроніка"
+      }
+    }
+  }
+}
