@@ -9,7 +9,7 @@ import { routes } from './path';
 import Root from 'Components/Root';
 import NotFound from 'Components/NotFound';
 import { Backdrop } from 'Components/Backdrop';
-// import { Spinner } from 'Components/Spinner'; // ! This component does not exist yet
+import { Spinner } from 'Components/Spinner';
 // * <- Core components
 
 // * Lazy components ->
@@ -24,7 +24,7 @@ type RoutesProps = {};
 const Routes: React.FC<RoutesProps> = (props: RoutesProps) => {
   const preloadingComponent = (
     <Backdrop overflowAll>
-      <p>Loading...</p>
+      <Spinner />
     </Backdrop>
   );
 

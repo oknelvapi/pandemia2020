@@ -1,0 +1,88 @@
+$gainsboro: #c8c8c8;
+@mixin square($height, $width) {
+  height: $height;
+  width: $width;
+}
+.Container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  * {
+    box-sizing: border-box;
+  }
+}
+.Container_Spinner {
+  @include square(60px, 100%);
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all 0.1s linear;
+  transform: scale(10);
+}
+.Container .Container_Spinner {
+  z-index: 1501; // 1500 is a max index which is used by Material-ui Components
+  transform: scale(1);
+}
+.Container_Spinner_Loader {
+  @include square(100%, 100%);
+  border-radius: 50%;
+  border: 5px solid rgba($gainsboro, 1);
+  border-left-color: rgba($gainsboro, 0.4);
+  animation-play-state: paused;
+  animation: rotate 1s infinite linear;
+}
+.Container_Spinner_Icons {
+  @include square(60px, 60px);
+  margin: auto;
+  padding: 5px;
+  border-radius: 50%;
+}
+.Container .Container_Spinner .Container_Spinner_Loader {
+  animation-play-state: running;
+}
+@keyframes showicons {
+  0% {
+    transform: scale(0);
+  }
+  11% {
+    transform: scale(1.2);
+  }
+  22% {
+    transform: scale(1);
+  }
+  33% {
+    transform: scale(0);
+  }
+}
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.Container_Spinner svg {
+  @include square(24px, 24px);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  font-size: 24px;
+  line-height: 1;
+  color: rgba($gainsboro, 1);
+  transform: scale(0) translate3d(0, 0, 0);
+}
+.Container_Spinner svg:nth-of-type(1) {
+  animation: showicons 2s infinite ease-in-out;
+}
+.Container_Spinner svg:nth-of-type(2) {
+  animation: showicons 2s 0.67s infinite ease-in-out;
+}
+.Container_Spinner svg:nth-of-type(3) {
+  animation: showicons 2s 1.3s infinite ease-in-out;
+}
