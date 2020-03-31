@@ -1,0 +1,108 @@
+[
+  {
+    "id": "UA-05",
+    "cases": 23
+  },
+  {
+    "id": "UA-07",
+    "cases": 2
+  },
+  {
+    "id": "UA-09",
+    "cases": 2
+  },
+  {
+    "id": "UA-12",
+    "cases": 8
+  },
+  {
+    "id": "UA-14",
+    "cases": 6
+  },
+  {
+    "id": "UA-18",
+    "cases": 5,
+    "deaths": 1
+  },
+  {
+    "id": "UA-21",
+    "cases": 1
+  },
+  {
+    "id": "UA-23",
+    "cases": 11,
+    "recovered": 1
+  },
+  {
+    "id": "UA-26",
+    "cases": 41,
+    "deaths": 3
+  },
+  {
+    "id": "UA-30",
+    "cases": 102
+  },
+  {
+    "id": "UA-32",
+    "cases": 49,
+    "deaths": 2
+  },
+  {
+    "id": "UA-35",
+    "cases": 4
+  },
+  {
+    "id": "UA-46",
+    "cases": 6
+  },
+
+  {
+    "id": "UA-51",
+    "cases": 8
+  },
+  {
+    "id": "UA-53",
+    "cases": 1
+  },
+  {
+    "id": "UA-56",
+    "cases": 11,
+    "deaths": 2
+  },
+  {
+    "id": "UA-59",
+    "cases": 9,
+    "deaths": 1
+  },
+  {
+    "id": "UA-61",
+    "cases": 60,
+    "deaths": 1
+  },
+  {
+    "id": "UA-63",
+    "cases": 1
+  },
+  {
+    "id": "UA-65",
+    "cases": 1
+  },
+  {
+    "id": "UA-68",
+    "cases": 2
+  },
+  {
+    "id": "UA-71",
+    "cases": 50
+  },
+  {
+    "id": "UA-74",
+    "cases": 2
+  },
+  {
+    "id": "UA-77",
+    "cases": 75,
+    "deaths": 1,
+    "recovered": 5
+  }
+]
