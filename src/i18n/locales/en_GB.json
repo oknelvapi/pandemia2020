@@ -5,8 +5,17 @@
       "tooltips": {
         "countries": "Select country",
         "languages": "Change language",
-        "github": "GitHub repository"
+        "github": "Project code"
       }
+    },
+    "map": {
+      "toggleButtons": {
+        "confirmedCases": "Confirmed cases",
+        "deaths": "Deaths",
+        "recovered": "Recovered",
+        "total": "Total"
+      },
+      "noData": "No data"
     },
     "bottomNavigation": {
       "links": {
@@ -61,8 +70,8 @@
         "region": "Kyiv"
       },
       "kropyvnytskyi": {
-        "capital": "kropyvnytskyi",
-        "region": "kropyvnytskyi"
+        "capital": "Kropyvnytskyi",
+        "region": "Kropyvnytskyi"
       },
       "sevastopol": {
         "capita;": "Sevastopol",

@@ -5,10 +5,18 @@
       "tooltips": {
         "countries": "Обрати країну",
         "languages": "Змінити мову",
-        "github": "GitHub репотизотій"
+        "github": "Код проекту"
       }
     },
-
+    "map": {
+      "toggleButtons": {
+        "confirmedCases": "Підтверджено",
+        "deaths": "Загинуло",
+        "recovered": "Вилікувалося",
+        "total": "Загалом"
+      },
+      "noData": "Нема даних"
+    },
     "bottomNavigation": {
       "links": {
         "worldMap": "Мапа",
@@ -39,7 +47,7 @@
       },
       "zhytomyr": {
         "capital": "Житомир",
-        "region": "Житомиршина"
+        "region": "Житомирщина"
       },
       "zakarpattia": {
         "capital": "Ужгород",
@@ -91,7 +99,7 @@
       },
       "rivne": {
         "capital": "Рівне",
-        "region": "рівненщина"
+        "region": "Рівненщина"
       },
       "sumy": {
         "capital": "Суми",

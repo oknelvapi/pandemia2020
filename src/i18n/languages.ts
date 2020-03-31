@@ -1,1 +1,1 @@
-export const LANGUAGES: Array<string> = ['EN', 'UA', 'BE'];
+export const LANGUAGES: Array<string> = ['EN', 'UA'];
