@@ -29,8 +29,8 @@ export const ToggleButtons: React.FC<ToggleButtonsProps> = ({
           <ToggleButtonGroup exclusive onChange={handleAlignment} aria-label="text alignment">
             <Tooltip placement="bottom" title={t('map.toggleButtons.confirmedCases')}>
               <ToggleButton
-                selected={alignment === 'confirmed cases'}
-                value="cases"
+                selected={alignment === 'confirmed'}
+                value="confirmed"
                 aria-label="left aligned"
                 disabled={props.confirmedDisabled}
               >
