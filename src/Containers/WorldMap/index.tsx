@@ -1,6 +1,8 @@
 /* eslint-disable @typescript-eslint/camelcase */
 import React, { useEffect, useState, useContext } from 'react';
 
+import { useSelector } from 'react-redux';
+
 import * as am4core from '@amcharts/amcharts4/core';
 import * as am4maps from '@amcharts/amcharts4/maps';
 import am4themes_animated from '@amcharts/amcharts4/themes/animated';
@@ -9,16 +11,12 @@ import am4geodata_world from '@amcharts/amcharts4-geodata/worldLow';
 
 import { Box } from '@material-ui/core';
 
+import { DustEffect } from 'Components/DustEffect';
 import { Summary } from 'Components/Summary';
 import { ToggleButtons } from 'Components/ToggleButtons';
 import { SettingsContext } from 'Components/Root/settingsReducer';
 import { ukraineRegions } from 'Configs/ukraineRegions';
-import { colorSet, handleHover, getTotal } from 'Containers/WorldMap/Tools';
-import { wholeWorld } from 'Configs/wholeWorld';
-
-import jsonData from 'Configs/Mock/ukraine_covid19.json';
-import jsonDataW from 'Configs/Mock/worldCovid.json';
-import totalData from 'Configs/Mock/total.json';
+import { colorSet, handleHover } from 'Containers/WorldMap/Tools';
 
 type WorldMapProps = {};
 type WorldMapState = {
@@ -27,14 +25,14 @@ type WorldMapState = {
 
 const WorldMap: React.FC<WorldMapProps> = () => {
   const { settingsState } = useContext(SettingsContext);
-  const [alignment, setAlignment] = useState<string>('cases');
+  const { global, confirmed, dataForUkraineFromRNBO } = useSelector((state: Store) => state.worldMap);
+  const [alignment, setAlignment] = useState<string>('confirmed');
 
   const handleAlignment = (event: React.MouseEvent<HTMLElement>, newAlignment: string): void => {
     setAlignment(newAlignment);
   };
-
-  const addIndicatorToMapValue = (jsonData: Region[], alignment: string): Region[] =>
-    [...jsonData].map(region => ({ ...region, ...{ value: region[alignment] } }));
+  const normalizationDataForMap = (jsonData: any, alignment: string): WorldMapConfirmed[] =>
+    [...jsonData].map(region => ({ ...region, ...{ value: region[alignment] === 0 ? null : region[alignment] } }));
 
   // * Set themes
   am4core.useTheme(am4themes_animated);
@@ -43,7 +41,7 @@ const WorldMap: React.FC<WorldMapProps> = () => {
     // TODO Create map instance
     const map = am4core.create('chartdiv', am4maps.MapChart);
     map.zoomControl = new am4maps.ZoomControl();
-    map.zoomControl.valign = 'top';
+    map.zoomControl.valign = 'bottom';
     map.projection = new am4maps.projections.Miller();
 
     // TODO Create map polygon series
@@ -68,7 +66,6 @@ const WorldMap: React.FC<WorldMapProps> = () => {
     // * Bind "fill" property to "fill" key in data
     polygonTemplate.propertyFields.fill = 'fill';
     // * Create hover state and set alternative fill color
-    // ! It was switched of
     const hs = polygonTemplate.states.create('hover');
     hs.properties.fill = am4core.color('#132a3e');
 
@@ -124,30 +121,27 @@ const WorldMap: React.FC<WorldMapProps> = () => {
       map.geodata = am4geodata_ukraineLow;
       polygonSeries.data = ukraineRegions().map(prevRegion => ({
         ...prevRegion,
-        ...addIndicatorToMapValue(jsonData, alignment).find((region: Region) => prevRegion.id === region.id),
+        ...normalizationDataForMap(dataForUkraineFromRNBO, alignment).find(
+          (region: any) => prevRegion.rnboId === region.id,
+        ),
+        id: prevRegion.id,
       }));
     } else {
       map.geodata = am4geodata_world;
-
-      const worldData = wholeWorld.map(county => getTotal(county, jsonDataW.records));
-
-      polygonSeries.data = [...addIndicatorToMapValue(worldData, alignment)];
+      polygonSeries.data = [...normalizationDataForMap(confirmed, alignment)];
     }
 
     return (): void => {
       map.dispose();
     };
-  }, [settingsState.indexCountry, settingsState.indexLang, alignment]);
+  }, [settingsState.indexCountry, settingsState.indexLang, alignment, confirmed, dataForUkraineFromRNBO]);
 
   return (
     <Box position="relative" height={1} width={1}>
+      <DustEffect />
       <Box zIndex="modal" position="absolute" left={16}>
-        <ToggleButtons
-          handleAlignment={handleAlignment}
-          alignment={alignment}
-          recoveredDisabled={settingsState.indexCountry === 1}
-        />
-        <Summary count={totalData[settingsState.indexCountry]} />
+        <ToggleButtons handleAlignment={handleAlignment} alignment={alignment} />
+        <Summary count={settingsState.indexCountry === 0 ? global.ukraine : global.world} />
       </Box>
       <Box id="chartdiv" height={1} width={1}></Box>
     </Box>

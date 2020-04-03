@@ -6,7 +6,7 @@ type ColorSet = {
 };
 
 export const colorSet: ColorSet = {
-  cases: {
+  confirmed: {
     min: '#FFE082',
     max: '#641E16',
   },

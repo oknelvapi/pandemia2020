@@ -34,11 +34,10 @@ const useStyles = makeStyles(theme => ({
 const ICONS = [LocalHotel, CrossIcon, AccessibilityNew];
 
 type SummaryProps = {
-  count: Region;
+  count: WorldMapConfirmed | WorldMapGlobal | null;
 };
 
 export const Summary: React.FC<SummaryProps> = ({ count }: SummaryProps) => {
-  const { cases, deaths, recovered } = count;
   const { t } = useTranslation();
   const [hide, setHide] = useState<boolean>(true);
 
@@ -55,8 +54,8 @@ export const Summary: React.FC<SummaryProps> = ({ count }: SummaryProps) => {
       </Box>
       <Collapse in={!hide}>
         <List dense>
-          {[cases, deaths, recovered].map((item, idx) => (
-            <ListItem key={item}>
+          {[count?.confirmed, count?.deaths, count?.recovered].map((item, idx) => (
+            <ListItem key={idx}>
               <ListItemIcon>{React.createElement(ICONS[idx])}</ListItemIcon>
               <ListItemText>
                 <Typography color="primary" className={classes.indicator}>
