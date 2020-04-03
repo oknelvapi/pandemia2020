@@ -46,7 +46,7 @@ am4core.ready(function() {
 
   let sliderAnimation;
 
-  let perCapita = false;
+  const perCapita = false;
 
   //////////////////////////////////////////////////////////////////////////////
   // PREPARE DATA
@@ -317,76 +317,76 @@ am4core.ready(function() {
   title.y = 20;
 
   // switch between map and globe
-  const mapGlobeSwitch = mapChart.createChild(am4core.SwitchButton);
-  mapGlobeSwitch.align = 'right';
-  mapGlobeSwitch.y = 15;
-  mapGlobeSwitch.leftLabel.text = 'Map';
-  mapGlobeSwitch.leftLabel.fill = am4core.color('#ffffff');
-  mapGlobeSwitch.rightLabel.fill = am4core.color('#ffffff');
-  mapGlobeSwitch.rightLabel.text = 'Globe';
-  mapGlobeSwitch.verticalCenter = 'top';
+  // const mapGlobeSwitch = mapChart.createChild(am4core.SwitchButton);
+  // mapGlobeSwitch.align = 'right';
+  // mapGlobeSwitch.y = 15;
+  // mapGlobeSwitch.leftLabel.text = 'Map';
+  // mapGlobeSwitch.leftLabel.fill = am4core.color('#ffffff');
+  // mapGlobeSwitch.rightLabel.fill = am4core.color('#ffffff');
+  // mapGlobeSwitch.rightLabel.text = 'Globe';
+  // mapGlobeSwitch.verticalCenter = 'top';
 
-  mapGlobeSwitch.events.on('toggled', function() {
-    if (mapGlobeSwitch.isActive) {
-      mapChart.projection = new am4maps.projections.Orthographic();
-      mapChart.backgroundSeries.show();
-      mapChart.panBehavior = 'rotateLongLat';
-      polygonSeries.exclude = [];
-    } else {
-      mapChart.projection = new am4maps.projections.Miller();
-      mapChart.backgroundSeries.hide();
-      mapChart.panBehavior = 'move';
-      removeAntarctica(mapData);
-      polygonSeries.data = mapData;
-      polygonSeries.exclude = ['AQ'];
-    }
-  });
+  // mapGlobeSwitch.events.on('toggled', function() {
+  //   if (mapGlobeSwitch.isActive) {
+  //     mapChart.projection = new am4maps.projections.Orthographic();
+  //     mapChart.backgroundSeries.show();
+  //     mapChart.panBehavior = 'rotateLongLat';
+  //     polygonSeries.exclude = [];
+  //   } else {
+  //     mapChart.projection = new am4maps.projections.Miller();
+  //     mapChart.backgroundSeries.hide();
+  //     mapChart.panBehavior = 'move';
+  //     removeAntarctica(mapData);
+  //     polygonSeries.data = mapData;
+  //     polygonSeries.exclude = ['AQ'];
+  //   }
+  // });
 
   // switch between map and globe
-  const absolutePerCapitaSwitch = mapChart.createChild(am4core.SwitchButton);
-  absolutePerCapitaSwitch.align = 'center';
-  absolutePerCapitaSwitch.y = 15;
-  absolutePerCapitaSwitch.leftLabel.text = 'Absolute';
-  absolutePerCapitaSwitch.leftLabel.fill = am4core.color('#ffffff');
-  absolutePerCapitaSwitch.rightLabel.fill = am4core.color('#ffffff');
-  absolutePerCapitaSwitch.rightLabel.text = 'Per Capita';
-  absolutePerCapitaSwitch.rightLabel.interactionsEnabled = true;
-  absolutePerCapitaSwitch.rightLabel.tooltipText =
-    'When calculating max value, countries with population less than 100.000 are not included.';
-  absolutePerCapitaSwitch.verticalCenter = 'top';
+  // const absolutePerCapitaSwitch = mapChart.createChild(am4core.SwitchButton);
+  // absolutePerCapitaSwitch.align = 'center';
+  // absolutePerCapitaSwitch.y = 15;
+  // absolutePerCapitaSwitch.leftLabel.text = 'Absolute';
+  // absolutePerCapitaSwitch.leftLabel.fill = am4core.color('#ffffff');
+  // absolutePerCapitaSwitch.rightLabel.fill = am4core.color('#ffffff');
+  // absolutePerCapitaSwitch.rightLabel.text = 'Per Capita';
+  // absolutePerCapitaSwitch.rightLabel.interactionsEnabled = true;
+  // absolutePerCapitaSwitch.rightLabel.tooltipText =
+  //   'When calculating max value, countries with population less than 100.000 are not included.';
+  // absolutePerCapitaSwitch.verticalCenter = 'top';
 
-  absolutePerCapitaSwitch.events.on('toggled', function() {
-    if (absolutePerCapitaSwitch.isActive) {
-      bubbleSeries.hide(0);
-      perCapita = true;
-      bubbleSeries.interpolationDuration = 0;
-      polygonSeries.heatRules.getIndex(0).max = colors[currentType];
-      polygonSeries.heatRules.getIndex(0).maxValue = maxPC[currentType];
-      polygonSeries.mapPolygons.template.applyOnClones = true;
+  // absolutePerCapitaSwitch.events.on('toggled', function() {
+  //   if (absolutePerCapitaSwitch.isActive) {
+  //     bubbleSeries.hide(0);
+  //     perCapita = true;
+  //     bubbleSeries.interpolationDuration = 0;
+  //     polygonSeries.heatRules.getIndex(0).max = colors[currentType];
+  //     polygonSeries.heatRules.getIndex(0).maxValue = maxPC[currentType];
+  //     polygonSeries.mapPolygons.template.applyOnClones = true;
 
-      sizeSlider.hide();
-      filterSlider.hide();
-      sizeLabel.hide();
-      filterLabel.hide();
+  //     sizeSlider.hide();
+  //     filterSlider.hide();
+  //     sizeLabel.hide();
+  //     filterLabel.hide();
 
-      updateCountryTooltip();
-    } else {
-      perCapita = false;
-      polygonSeries.interpolationDuration = 0;
-      bubbleSeries.interpolationDuration = 1000;
-      bubbleSeries.show();
-      polygonSeries.heatRules.getIndex(0).max = countryColor;
-      polygonSeries.mapPolygons.template.tooltipText = undefined;
-      sizeSlider.show();
-      filterSlider.show();
-      sizeLabel.show();
-      filterLabel.show();
-    }
-    polygonSeries.mapPolygons.each(function(mapPolygon) {
-      mapPolygon.fill = mapPolygon.fill;
-      mapPolygon.defaultState.properties.fill = undefined;
-    });
-  });
+  //     updateCountryTooltip();
+  //   } else {
+  //     perCapita = false;
+  //     polygonSeries.interpolationDuration = 0;
+  //     bubbleSeries.interpolationDuration = 1000;
+  //     bubbleSeries.show();
+  //     polygonSeries.heatRules.getIndex(0).max = countryColor;
+  //     polygonSeries.mapPolygons.template.tooltipText = undefined;
+  //     sizeSlider.show();
+  //     filterSlider.show();
+  //     sizeLabel.show();
+  //     filterLabel.show();
+  //   }
+  //   polygonSeries.mapPolygons.each(function(mapPolygon) {
+  //     mapPolygon.fill = mapPolygon.fill;
+  //     mapPolygon.defaultState.properties.fill = undefined;
+  //   });
+  // });
 
   // buttons & chart container
   const buttonsAndChartContainer = container.createChild(am4core.Container);

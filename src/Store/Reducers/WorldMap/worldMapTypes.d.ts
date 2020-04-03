@@ -5,7 +5,7 @@ type WorldMapReducer = {
     ukraine: WorldMapGlobal;
   };
   confirmed: Array<WorldMapConfirmed> | null;
-  dataForUkraineFromRNBO: Array<dataFromRNBO> | null;
+  dataForUkraineFromRNBO: Array<dataFromRNBO> | [];
 };
 
 type WorldMapGlobal = {

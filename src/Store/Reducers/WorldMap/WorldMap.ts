@@ -20,7 +20,7 @@ export const worldMapState: WorldMapReducer = {
     },
   },
   confirmed: null,
-  dataForUkraineFromRNBO: null,
+  dataForUkraineFromRNBO: [],
 };
 
 const checkUkraineData = (confirmed: Array<WorldMapConfirmed>) => {

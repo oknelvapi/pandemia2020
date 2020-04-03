@@ -32,7 +32,9 @@ const WorldMap: React.FC<WorldMapProps> = () => {
     setAlignment(newAlignment);
   };
   const normalizationDataForMap = (jsonData: any, alignment: string): WorldMapConfirmed[] =>
-    [...jsonData].map(region => ({ ...region, ...{ value: region[alignment] === 0 ? null : region[alignment] } }));
+    jsonData
+      .slice()
+      .map((region: any) => ({ ...region, ...{ value: region[alignment] === 0 ? null : region[alignment] } }));
 
   // * Set themes
   am4core.useTheme(am4themes_animated);
@@ -43,6 +45,8 @@ const WorldMap: React.FC<WorldMapProps> = () => {
     map.zoomControl = new am4maps.ZoomControl();
     map.zoomControl.valign = 'bottom';
     map.projection = new am4maps.projections.Miller();
+
+    // const currentCountry = settingsState.indexCountry === 1 ? 'Ukraine' : 'World';
 
     // TODO Create map polygon series
     const polygonSeries = map.series.push(new am4maps.MapPolygonSeries());
